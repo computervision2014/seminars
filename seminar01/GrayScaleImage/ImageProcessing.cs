@@ -17,19 +17,7 @@ namespace GrayScaleImage
              * TODO: вернуть это значение
              * note: в С# дефолтным сичтается формат Bgra
              */
-            byte[] arr = new byte[originalImage.Length];
-            byte[] res = new byte[originalImage.Length / 4];
-            int j = 0;
-            Array.Copy(originalImage, arr, originalImage.Length);
-            for (int i = 0; i < arr.Length; i+=4)
-            {
-               arr[i] =(byte)(arr[i] * 0.114);
-               arr[i + 1] = (byte)(arr[i + 1] * 0.587);
-               arr[i + 2] = (byte)(arr[i + 2] * 0.299);
-               res[j] = (byte)( arr[i] + arr[i + 1] + arr[i + 2]);
-               j++;
-            }
-            return res;
+            return null;
         }
 
         // inverts image
@@ -38,14 +26,8 @@ namespace GrayScaleImage
             /* 
              * TODO: создать новый byte[], который будет содержать инвертированное изображение, т.е. 255 минус текущее значение
              * TODO: вернуть это значение
-             */
-            byte[] arr = new byte[originalImage.Length];
-            Array.Copy(originalImage, arr, originalImage.Length);
-            for (int i = 0; i < arr.Length; i ++ )
-            {
-                arr[i] = (byte)(255 - arr[i]);
-            }
-            return arr;
+             */         
+            return null;
         }
 
         // shows only red channel
@@ -54,15 +36,8 @@ namespace GrayScaleImage
             /* 
              * TODO: создать новый byte[], который будет содержать инвертированное изображение, т.е. каналы G и B занулить
              * TODO: вернуть это значение
-             */
-            byte [] arr = new byte[originalImage.Length];
-            Array.Copy(originalImage, arr, originalImage.Length);
-            for (int i = 0; i < arr.Length; i+=4)
-            {
-                arr[i] = 0;
-                arr[i+1] = 0;
-            }
-            return arr;
+             */  
+            return null;
         }
     }
 }
