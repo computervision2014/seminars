@@ -1,0 +1,43 @@
+﻿<Window x:Class="BlurContrastBrightnessImage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Blur, Contrast, Brightness" Height="550" Width="725">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="openFileButton" Grid.Column="0" Grid.Row="0" Content="Open image" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="10" Margin="0 10 0 0" Click="openFileButton_Click"/>
+
+        <Grid Grid.Column="1" Grid.Row="0" x:Name="slidersGrid" Margin="0 10 0 0" IsEnabled="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Slider x:Name="gaussSlider" Grid.Column="0" Grid.Row="0" Minimum="0" Maximum="10" ValueChanged="slider_ValueChanged" />
+            <Label Content="Gaussian Blur" Grid.Column="1" Grid.Row="0"/>
+
+            <Slider x:Name="brighnessSlider" Grid.Column="0" Grid.Row="1" Minimum="0" Maximum="101" IsSnapToTickEnabled="True" TickFrequency="10" ValueChanged="slider_ValueChanged" />
+            <Label Content="Brighness" Grid.Column="1" Grid.Row="1"/>
+
+            <Slider x:Name="contrastSlider" Grid.Column="0" Grid.Row="2" Minimum="0" Maximum="201" IsSnapToTickEnabled="True" TickFrequency="15" ValueChanged="slider_ValueChanged" />
+            <Label Content="Contrast" Grid.Column="1" Grid.Row="2"/>
+
+        </Grid>
+
+        <Image  x:Name="originalPanel" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" Margin="3"/>
+        <Image  x:Name="grayscalePanel" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Margin="3"/>
+    </Grid>
+</Window>
