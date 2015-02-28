@@ -1,3 +1,11 @@
+28.02.2015
+------
+1. Gist for box filter
+https://gist.github.com/7052c07a71df7a3a1c64
+2. Gist for boxBlur_4, explain what happens there https://gist.github.com/esibirtseva/39bf5d00ad597aa78c4b
+3. Naive Gauss https://gist.github.com/e53dd29963f715ae39bc
+
+
 Семинар 01
 ------
 ####Базовые операции над изображением.
