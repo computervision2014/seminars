@@ -1,0 +1,54 @@
+﻿<Window x:Class="FastGaussianBlur.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Harder, Better, Faster, Stronger" Height="650" Width="825">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image  x:Name="originalPanel" VerticalAlignment="Top" Grid.Column="0" Margin="3" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Center">
+                <Button x:Name="openFileButton" Grid.Row="0" Content="Open image"  Padding="10" Margin="0 10 0 0" Click="openFileButton_Click"/>
+                <Button x:Name="proccessButton" Grid.Row="0" Content="Make me cry" Padding="10" Margin="0 10 0 0" IsEnabled="False" Click="proccessButton_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="resultsGrid" Grid.Row="1" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+
+                <Label x:Name="timeElapsed1" Content="Time: "/>
+                <Image x:Name="blurImage1" VerticalAlignment="Top" Margin="3"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+
+                <Label x:Name="timeElapsed2" Content="Time: "/>
+                <Image x:Name="blurImage2" VerticalAlignment="Top" Margin="3"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+                <Label x:Name="timeElapsed3" Content="Time: "/>
+                <Image x:Name="blurImage3" Margin="3"/>
+                
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                <Label x:Name="timeElapsed4" Content="Time: "/>
+                <Image x:Name="blurImage4" Margin="3"/>
+                
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>
