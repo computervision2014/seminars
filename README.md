@@ -1,7 +1,7 @@
 28.02.2015
 ------
 Gist for box filter
-https://gist.github.com/7052c07a71df7a3a1c64.git
+https://gist.github.com/7052c07a71df7a3a1c64
 
 
 Семинар 01
