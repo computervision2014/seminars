@@ -55,7 +55,7 @@ namespace SegmentationImage
         // click on processing buttons
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string buttonName = (sender as Button).Content.ToString();
+            string buttonName = (sender as Button).Name.ToString();
             ImageProcessing process = new ImageProcessing();
             byte[] processedImageBytes;
             switch (buttonName[0])

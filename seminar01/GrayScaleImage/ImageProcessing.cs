@@ -34,7 +34,7 @@ namespace GrayScaleImage
         public byte[] setRedFilter(byte[] originalImage)
         {
             /* 
-             * TODO: создать новый byte[], который будет содержать инвертированное изображение, т.е. каналы G и B занулить
+             * TODO: создать новый byte[], который будет содержать только красный канал, т.е. каналы G и B занулить
              * TODO: вернуть это значение
              */  
             return null;
