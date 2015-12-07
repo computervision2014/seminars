@@ -12,7 +12,7 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image  x:Name="originalPanel" VerticalAlignment="Top" Grid.Column="0" Margin="3" HorizontalAlignment="Center"/>
+            <Image  x:Name="originalPanel" Grid.Column="0" Margin="3" VerticalAlignment="Top" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Center">
                 <Button x:Name="openFileButton" Grid.Row="0" Content="Open image"  Padding="10" Margin="0 10 0 0" Click="openFileButton_Click"/>
                 <Button x:Name="proccessButton" Grid.Row="0" Content="Make me cry" Padding="10" Margin="0 10 0 0" IsEnabled="False" Click="proccessButton_Click"/>
@@ -24,30 +24,45 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+            <Grid Grid.Row="0" Grid.Column="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="timeElapsed1" Content="Time: " Grid.Row="0"/>
+                <Image x:Name="blurImage1"  Margin="3" Grid.Row="1" HorizontalAlignment="Left"/>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="timeElapsed2" Content="Time: " Grid.Row="0"/>
+                <Image x:Name="blurImage2" VerticalAlignment="Top" Margin="3" Grid.Row="1" HorizontalAlignment="Left"/>
+        </Grid>
+            <Grid  Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="timeElapsed3" Content="Time: " Grid.Row="0"/>
+                <Image x:Name="blurImage3" Margin="3" Grid.Row="1" HorizontalAlignment="Left"/>
 
-                <Label x:Name="timeElapsed1" Content="Time: "/>
-                <Image x:Name="blurImage1" VerticalAlignment="Top" Margin="3"/>
-            </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+        </Grid>
 
-                <Label x:Name="timeElapsed2" Content="Time: "/>
-                <Image x:Name="blurImage2" VerticalAlignment="Top" Margin="3"/>
-            </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-                <Label x:Name="timeElapsed3" Content="Time: "/>
-                <Image x:Name="blurImage3" Margin="3"/>
-                
-            </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
-                <Label x:Name="timeElapsed4" Content="Time: "/>
-                <Image x:Name="blurImage4" Margin="3"/>
-                
-            </StackPanel>
+            <Grid  Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="timeElapsed4" Content="Time: " Grid.Row="0"/>
+                <Image x:Name="blurImage4" Margin="3" Grid.Row="1" HorizontalAlignment="Left"/>
+
+            </Grid>
 
         </Grid>
     </Grid>
